@@ -1,0 +1,15 @@
+---
+- hosts: 34.227.89.173
+  user: root
+  tasks:
+  - name: uninstall apache2,vsftpd
+    package: name="{{item}}" state=absent
+    with_items:
+            - apache2
+            - vsftpd
+  - name: install apache2,vsftpd,openssh
+    package: name="{{item}}" state=present
+    with_items:
+            - apache2
+            - vsftpd
+            - openssh-server

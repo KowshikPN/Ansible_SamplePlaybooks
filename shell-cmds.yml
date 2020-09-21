@@ -1,0 +1,15 @@
+---
+- hosts: 172.31.52.153
+  user: root
+  tasks:
+  - name: create a chefdk-pkg dir
+    file: path=/chefdk-pkg state=directory
+
+  - name: download chefdk pkg
+    shell:
+      chdir: /chefdk-pkg
+      cmd: wget https://packages.chef.io/files/stable/chefdk/4.8.23/ubuntu/18.04/chefdk_4.8.23-1_amd64.deb
+  - name: install chefdk
+    shell:
+       chdir: /chefdk-pkg
+       cmd: dpkg -i chefdk_4.8.23-1_amd64.deb 

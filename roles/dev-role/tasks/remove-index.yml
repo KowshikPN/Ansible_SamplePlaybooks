@@ -1,0 +1,2 @@
+- name: remove index.yml
+  file: path=/var/www/html/index.html state=absent

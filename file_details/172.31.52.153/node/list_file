@@ -1,0 +1,28 @@
+total 8
+drwxr-xr-x 2 root root 4096 Jul  1 21:12 dir1
+drwxr-xr-x 2 root root 4096 Jul  1 21:12 dir2
+-rw-r--r-- 1 root root    0 Jul  1 21:12 file1
+-rw-r--r-- 1 root root    0 Jul  1 21:12 file2
+-rw-r--r-- 1 root root    0 Jul  1 21:12 file3
+-rw-r--r-- 1 root root    0 Jul  1 21:18 list_file
+total 12
+drwxr-xr-x 2 root root 4096 Jul  1 21:12 dir1
+drwxr-xr-x 2 root root 4096 Jul  1 21:12 dir2
+-rw-r--r-- 1 root root    0 Jul  1 21:12 file1
+-rw-r--r-- 1 root root    0 Jul  1 21:12 file2
+-rw-r--r-- 1 root root    0 Jul  1 21:12 file3
+-rw-r--r-- 1 root root  292 Jul  1 21:18 list_file
+total 12
+drwxr-xr-x 2 root root 4096 Jul  1 21:12 dir1
+drwxr-xr-x 2 root root 4096 Jul  1 21:12 dir2
+-rw-r--r-- 1 root root    0 Jul  1 21:12 file1
+-rw-r--r-- 1 root root    0 Jul  1 21:12 file2
+-rw-r--r-- 1 root root    0 Jul  1 21:12 file3
+-rw-r--r-- 1 root root  585 Jul  1 21:22 list_file
+total 12
+drwxr-xr-x 2 root root 4096 Jul  1 21:12 dir1
+drwxr-xr-x 2 root root 4096 Jul  1 21:12 dir2
+-rw-r--r-- 1 root root    0 Jul  1 21:12 file1
+-rw-r--r-- 1 root root    0 Jul  1 21:12 file2
+-rw-r--r-- 1 root root    0 Jul  1 21:12 file3
+-rw-r--r-- 1 root root  878 Jul  1 21:24 list_file

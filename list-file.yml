@@ -1,0 +1,10 @@
+---
+- hosts: 172.31.52.153
+  user: root
+  tasks:
+  - name: list files
+    shell:
+      chdir: /node
+      cmd: ls -l >> list_file
+  - name: fetch file from node
+    fetch: src=/node/list_file dest=/home/ubuntu/sample-playbooks/file_details

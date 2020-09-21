@@ -1,0 +1,15 @@
+---
+- hosts: 34.229.186.144
+  user: root
+  tasks:
+  - name: remove apache2
+    package: name=apache2 state=absent
+
+  - name: install apache2
+    package: name=apache2 state=present
+    notify: restart apache2
+    
+  handlers:
+  - name: restart apache2
+    service: name=apache2 state=restarted
+

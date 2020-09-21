@@ -1,0 +1,7 @@
+---
+- hosts: 54.237.218.15
+  user: root
+  tasks:
+  - name: fetch the file from target nodes
+    fetch: src=/test/file7 dest=/home/ubuntu/sample-playbooks
+

@@ -1,0 +1,35 @@
+---
+- hosts: 34.229.186.144
+  user: root
+  vars:
+   - package_name:
+           - apache2
+           - vsftpd
+  tasks:
+  - name: uninstall apache2, vsftpd
+    package: name="{{package_name}}" state=absent
+
+  - name: install apache2,vsftpd
+    package: name="{{package_name}}" state=present
+    notify:
+      - start apache2
+      - start vsftpd
+  - name: deploy index.html
+    copy: src=files/index.html dest=/var/www/html/index.html
+    tags:
+      - deploy-index
+    notify:
+     - restart apache2
+
+  handlers:
+  - name: start apache2
+    service: name=apache2 state=started
+    notify:
+      - start vsftpd
+  - name: start vsftpd
+    service: name=vsftpd state=started
+    tags:
+     - start-vsftpd
+  - name: restart apache2
+    service: name=apache2 state=restarted
+

@@ -1,0 +1,6 @@
+---
+- hosts: 34.229.186.144
+  user: root
+  tasks:
+  - name: install apache2
+    package: name=apache2 state=present

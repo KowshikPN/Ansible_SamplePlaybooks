@@ -1,0 +1,9 @@
+---
+- hosts: 172.31.52.153
+  user: root
+  tasks:
+  - name: clone a git repo
+    git:
+      repo: https://github.com/kpsfdc1/capital-cis.git
+      dest: /git_repo_clones
+      clone: yes

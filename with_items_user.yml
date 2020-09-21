@@ -1,0 +1,15 @@
+---
+- hosts: 34.227.89.173
+  user: root
+  tasks:
+  - name: create group
+    group: name=dev-group gid=897
+  - name: create users
+    user: 
+      name: "{{item.name}}"
+      password: "{{item.password}}"
+      group: "{{item.group}}"
+    with_items:
+        - { name: 'user1', password: 'pwd1', group: '897' }
+        - { name: 'user2', password: 'pwd2', group: '897' }
+        - { name: 'user3', password: 'pwd3', group: '897' }

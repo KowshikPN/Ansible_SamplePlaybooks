@@ -1,0 +1,10 @@
+---
+- hosts: 34.229.186.144
+  user: root
+  vars:
+   - package_name:
+           - vsftpd
+           - git
+  tasks:
+  - name: install vsftpd and git
+    package: name="{{package_name}}" state=present

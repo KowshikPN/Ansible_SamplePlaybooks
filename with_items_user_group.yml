@@ -1,0 +1,19 @@
+---
+- hosts: 34.227.89.173
+  user: root
+  tasks:
+  - name: create multiple groups
+    group:
+      name: "{{item.name}}"
+      gid: "{{item.gid}}"
+    with_items:
+        - { name: 'group1', gid: '898' }
+        - { name: 'group2', gid: '899' }
+  - name: create multiple users
+    user:
+      name: "{{item.name}}"
+      password: "{{item.password}}"
+      group: "{{item.group}}"
+    with_items:
+        - { name: 'user4', password: 'pwd4', group: '898' }
+        - { name: 'user5', password: 'pwd5', group: '899' }  

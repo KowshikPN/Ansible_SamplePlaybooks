@@ -1,0 +1,5 @@
+---
+# tasks file for test-role
+
+- include: install-git.yml
+- include: install-svn.yml

@@ -1,0 +1,7 @@
+---
+# tasks file for dev-role
+- name: install apache2
+  package: name=apache2 state=present
+
+- include: remove-index.yml
+- include: deploy-index.yml

@@ -1,0 +1,6 @@
+---
+- hosts: 34.229.186.144
+  user: root
+  tasks:
+  - name: restart the apache2 service
+    service: name=apache2 state=restarted

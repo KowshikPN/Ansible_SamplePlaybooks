@@ -1,0 +1,8 @@
+---
+- hosts: 34.229.186.144
+  user: root
+  tasks:
+  - name: create group
+    group: name=group1 gid=678
+  - name: create user
+    user: name=user1 group=678 password=user1pwd

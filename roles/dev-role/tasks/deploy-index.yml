@@ -1,0 +1,4 @@
+- name: deploy index.html
+  template: src=mytemplate  dest=/var/www/html/index.html
+  notify:
+    - restart-apache2

@@ -1,0 +1,7 @@
+---
+- hosts: 172.31.52.153
+  user: root
+  roles:
+    - dev-role
+    - test-role
+

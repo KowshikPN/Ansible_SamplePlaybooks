@@ -1,0 +1,9 @@
+---
+- hosts: 52.73.29.84
+  user: root
+  vars:
+    - create_file: /test/file1
+  tasks:
+  - name: create files
+    copy: dest="{{create_file}}" content="hello world"
+
